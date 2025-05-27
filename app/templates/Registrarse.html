@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registrarse</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+        <link rel="stylesheet" href="/app/templates/css/Estilo.css">
+    </head>
+        <body>
+        <header class="header-inicio">
+            <div class="logo-inicio">
+                <a href="{% url 'inicio' %}"><img src="/app/templates/img/Logo la merced.jfif"></a>
+            </div>
+            <div class="h1-inicio">
+            <p><h2>Comestibles la merced</h2></p>
+            </div>
+        </header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="¿Que buscas?" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            <a href="{% url 'inicio' %}">Inicio</a>
+            <a href="">Nosotros</a>
+            <a href="">Ayuda</a>
+        </nav>
+        <div class="div_registrarse">
+            <form action="/submit">
+                <fieldset>
+                    <legend>
+                        <h1>
+                            Registrarse
+                        </h1>
+                    </legend>
+                    Nombre: <input type="text" name="Nombre" required minlength="3"><br>
+                    Apelliodo: <input type="text" name="Apelliodo" required minlength="3"><br>
+                    Nombre de Usuario: <input type="text" name="Usuario" required minlength="5"><br>
+                    Contraseña: <input type="password" required minlength="8"><br>
+                    Verifique Contraseña: <input type="password" required minlength="8"><br>
+                    Correo: <input type="email" required minlength="18" placeholder="Email"><br>
+                    Fecha de nacimiento: <input type="date" required><br>
+                    <input type="checkbox" name="Notificacion" value="notificacion">Acepto resivir notifecaciones de productos y novedades.<br>
+                    <input type="checkbox" name="Terminos" value="Terminos" required>Acepto los Terminos de seguridad y privacidad.<br>
+                    <input type="submit" name="Registrarse" value="Enviar">
+                </fieldset>
+            </form>
+        </div>
+        <footer>
+            <div class="footer-inicio">
+                <a href="">Nosotros</a>
+                <a href="">Servicios</a>
+                <a href="">Sucursal</a>
+            </div>
+            <div class="footer-inicio">
+                <a href="">Ayuda</a>
+                <a href="">Copyright © 2025</a>
+            </div>
+            <div class="footer-inicio">
+                <a href="">Contactos</a>
+                <h3>CORREO: Isoto2726@hotmail.com</h3>
+                <h3>TEL: 0387 581-7328</h3>
+            </div>
+        </footer>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    </body>
+</html>
